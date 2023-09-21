@@ -30,8 +30,12 @@ void swap(int *num1, int *num2)
  */
 void quick_sort(int *array, size_t size)
 {
+	if (size < 2 || !array)
+		return;
+
 	quick_sort_recursion(array, 0, size - 1);
 }
+
 
 /**
  * quick_sort_recursion - A function sorts array of integers in ascending order
