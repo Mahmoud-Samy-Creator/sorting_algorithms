@@ -26,7 +26,7 @@ void quick_sort(int *array, size_t size)
 	if (size < 2 || !array)
 		return;
 
-	quick_sort_recursion(array, 0, size - 1);
+	quick_sort_recursion(array, 0, size - 1, size);
 }
 
 /**
@@ -36,19 +36,17 @@ void quick_sort(int *array, size_t size)
  * @high: upper boundary of the array to be sorted
  * Return: void
  */
-void quick_sort_recursion(int *array, int low, int high)
+void quick_sort_recursion(int *array, int low, int high, size_t size)
 {
 	/* condition for stop recursion */
-	size_t size = (size_t)sizeof(array) / (size_t)sizeof(array[0]);
-
 	if (low < high)
 	{
 		/* Get the pivot index for recursive partion of the array*/
 		int pivot_index = partition(array, low, high, size);
 
 		/* Recursive calling of quick recursion function*/
-		quick_sort_recursion(array, low, pivot_index - 1);
-		quick_sort_recursion(array, pivot_index + 1, high);
+		quick_sort_recursion(array, low, pivot_index - 1, size);
+		quick_sort_recursion(array, pivot_index + 1, high, size);
 	}
 }
 
