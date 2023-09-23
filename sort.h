@@ -28,6 +28,8 @@ void print_list(const listint_t *list);
 
 /* Bubble sort functions */
 void bubble_sort(int *array, size_t size);
+
+/* Insertion list */
 void insertion_sort_list(listint_t **list);
 
 /* Selection sort functions */
