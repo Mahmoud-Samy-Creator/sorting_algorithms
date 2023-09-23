@@ -34,6 +34,7 @@ void quick_sort(int *array, size_t size)
  * @array: Array of integers to be sorted
  * @low: lowe boundary of the array to be sorted
  * @high: upper boundary of the array to be sorted
+ * @size: size of the array passed
  * Return: void
  */
 void quick_sort_recursion(int *array, int low, int high, size_t size)
